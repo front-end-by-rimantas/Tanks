@@ -1,12 +1,16 @@
 "use strict";
 
-$('#game > .background').html( renderBackground( game ) );
+$('#game > .background').html( renderBackground( _GAME ) );
 
-$('#game > .battlefield').html( renderBattlefield( game ) );
+$('#game > .battlefield').html( renderBattlefield( _GAME ) );
 
-$('body').keyup(function(e){
+$('body').keydown(function(e){
     var key = e.keyCode;
 
     // nustatyti kuris zaidejas ir kuria kryptimi nori vaziuoti
-    tankAction( key, game.players );
+    tankAction( key, _GAME.players );
 });
+
+
+
+var _GAME_CLOCK = setInterval( doAnimations, _GAME.clock_step );

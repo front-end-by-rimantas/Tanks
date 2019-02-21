@@ -5,7 +5,8 @@
  * turi tilpti i ekrana (desktop/mobile)
  */
 
-var game = {
+var _GAME = {
+        clock_step: 50,
         map: {
             width: 13,
             height: 13
@@ -17,15 +18,15 @@ var game = {
                 base: {
                     image: 'base-1.png',
                     position: {
-                        x: 7,
-                        y: 1
+                        x: 6,
+                        y: 0
                     }
                 },
                 tank: {
                     image: 'tank_blue.png',
                     position: {
-                        x: 6,
-                        y: 1
+                        x: 5,
+                        y: 0
                     },
                     rotation: 'down',
                     speed: 500,                  // 1 ejimas per 500 milisekundziu
@@ -42,15 +43,15 @@ var game = {
                 base: {
                     image: 'base-3.png',
                     position: {
-                        x: 7,
-                        y: 13
+                        x: 6,
+                        y: 12
                     }
                 },
                 tank: {
                     image: 'tank_dark.png',
                     position: {
-                        x: 8,
-                        y: 13
+                        x: 7,
+                        y: 12
                     },
                     rotation: 'up',
                     speed: 500,                  // 1 ejimas per 500 milisekundziu
@@ -62,5 +63,6 @@ var game = {
                     }
                 }
             }
-        ]
+        ],
+        animations: []
     };
