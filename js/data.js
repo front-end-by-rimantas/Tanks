@@ -6,12 +6,13 @@
  */
 
 var _GAME = {
-        clock_step: 50,
+        clock_step: 100,
         map: {
             width: 13,
             height: 13
         },
         background: 'tileGrass1.png',
+        bullet_counter: 0,
         players: [
             {
                 name: 'NATO',
@@ -24,6 +25,8 @@ var _GAME = {
                 },
                 tank: {
                     image: 'tank_blue.png',
+                    bullet_image: 'bulletBlue2_outline.png',
+                    bullet_speed: 3,
                     position: {
                         x: 5,
                         y: 0
@@ -34,8 +37,10 @@ var _GAME = {
                         up: 38,
                         right: 39,
                         down: 40,
-                        left: 37
-                    }
+                        left: 37,
+                        fire: 96
+                    },
+                    action: ''
                 }
             },
             {
@@ -49,6 +54,8 @@ var _GAME = {
                 },
                 tank: {
                     image: 'tank_dark.png',
+                    bullet_image: 'bulletDark2_outline.png',
+                    bullet_speed: 3,
                     position: {
                         x: 7,
                         y: 12
@@ -59,8 +66,10 @@ var _GAME = {
                         up: 87,
                         right: 68,
                         down: 83,
-                        left: 65
-                    }
+                        left: 65,
+                        fire: 32
+                    },
+                    action: ''
                 }
             }
         ],

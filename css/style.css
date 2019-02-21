@@ -44,6 +44,7 @@ body * {
             background-repeat: no-repeat;
             background-size: contain;
             position: absolute;
+            background-position: center;
         }
         #game > .battlefield > .base {
         }
@@ -59,4 +60,18 @@ body * {
             }
             #game > .battlefield > .tank.rotation-left {
                 transform: rotate(90deg);
+            }
+        #game > .battlefield > .bullet {
+            background-size: 30%;
+        }
+            #game > .battlefield > .bullet.rotation-up {
+            }
+            #game > .battlefield > .bullet.rotation-down {
+                transform: rotate(180deg);
+            }
+            #game > .battlefield > .bullet.rotation-right {
+                transform: rotate(90deg);
+            }
+            #game > .battlefield > .bullet.rotation-left {
+                transform: rotate(270deg);
             }
