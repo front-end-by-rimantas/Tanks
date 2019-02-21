@@ -1,0 +1,62 @@
+body,
+body * {
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    box-sizing: border-box;
+    word-break: break-all;
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#game {
+    display: inline-block;
+    width: 650px;
+    height: 650px;
+    margin: calc( (100vh - 650px) / 2 ) calc( (100% - 650px) / 2 );
+    background-color: #000;
+    position: relative;
+}
+    #game > div {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+        #game > div > div {
+            display: inline-block;
+            float: left;
+            width: 50px;
+            height: 50px;
+        }
+    #game > .background {
+        background-image: url(../img/background/tileGrass1.png);
+    }
+        #game > .background > div {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    #game > .battlefield {
+    }
+        #game > .battlefield > div {
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+        }
+        #game > .battlefield > .base {
+        }
+        #game > .battlefield > .tank {
+        }
+            #game > .battlefield > .tank.rotation-down {
+            }
+            #game > .battlefield > .tank.rotation-up {
+                transform: rotate(180deg);
+            }
+            #game > .battlefield > .tank.rotation-right {
+                transform: rotate(270deg);
+            }
+            #game > .battlefield > .tank.rotation-left {
+                transform: rotate(90deg);
+            }
